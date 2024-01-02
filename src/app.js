@@ -127,6 +127,24 @@ socketChat(socketServer)
 //socketEmail(socketServer)//
 
 
+//swagger documentacion//
+const swaggerOptions = {
+    definition:{
+        openapi:'3.0.1',
+        info:{
+            title: 'Documentación API',
+            description:'Documentación realizada con Swagger en Proyecto Backend Coderhouse'
+        }
+    },
+    apis:[`src/docs/users.yaml`,
+          `src/docs/products.yaml`,
+          `src/docs/tickets.yaml`,
+          `src/docs/carts.yaml`]
+}
+const specs = swaggerJSDoc(swaggerOptions)
+app.use("/apidocs", swaggerUIExpress.serve, swaggerUIExpress.setup(specs))
+
+
 //Front
 app.post("/login", async (req, res) => {
     const { email, password } = req.body;
