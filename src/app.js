@@ -10,6 +10,9 @@ import {__dirname, authorization, passportCall} from "./utils.js"
 import initializePassword from './config/passport.config.js';
 import mongoose from 'mongoose' 
 import loggerMiddleware from '../loggerMiddleware.js';
+import swaggerJSDoc from 'swagger-jsdoc';
+import swaggerUIExpress from 'swagger-ui-express'
+
 
 
 
