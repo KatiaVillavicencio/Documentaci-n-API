@@ -14,8 +14,6 @@ import swaggerJSDoc from 'swagger-jsdoc';
 import swaggerUIExpress from 'swagger-ui-express'
 
 
-
-
 //routes
 import routerP from './routers/products.router.js';
 import routerC from './routers/carts.router.js';
@@ -135,8 +133,8 @@ const swaggerOptions = {
     definition:{
         openapi:'3.0.1',
         info:{
-            title: 'Documentación API',
-            description:'Documentación realizada con Swagger en Proyecto Backend Coderhouse'
+            title: 'Documentación de API',
+            description:'Documentación realizada con Swagger'
         }
     },
     apis:[`src/docs/users.yaml`,
